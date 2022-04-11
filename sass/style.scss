@@ -1,0 +1,173 @@
+@import 'variables';
+@import 'functions';
+
+// Root Style
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root {
+    font-size: 10px;
+}
+
+.main-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+// Utility Style
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    font-family: $roboto;
+    color: #fff;
+}
+
+.btn {
+    font-size: $button-font-size;
+    border:none;
+    border-radius: 5px;
+    padding:1rem 0.6rem;
+    margin-top: 1rem;
+    background: $button-background;
+    color: set-text-color($button-background);
+    transition: all 0.3s ease;
+
+    &:hover {
+        background:$button-background-hover;
+        color: set-text-color($button-background-hover);
+        padding:1.5rem 1rem;
+    }
+}
+
+.section-heading {
+    font-size: $section-font-size;
+    font-family: $roboto;
+}
+
+// Nav Style
+#nav .navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+#nav .head-icon {
+    text-align: left;
+    font-size: $nav-font-size;
+    font-weight: $nav-font-weight;
+    font-family: $roboto;
+    color: #fff;
+    padding: 1rem;
+    margin:0;
+}
+
+#nav .navbar {
+    padding: 0;
+}
+
+#nav .unordered-list {
+    list-style: none;
+    padding:0;
+    margin: 0;
+}
+
+#nav .unordered-list .nav-list-items {
+    display: inline-block;
+    font-size: $nav-font-size;
+    font-weight: $nav-font-weight;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+#nav .unordered-list .nav-list-items:hover {
+    background-color: $nav-hover-background;
+    & a {
+        color: set-text-color($nav-hover-background);
+    }
+}
+
+// Home Section
+#home .background-img {
+    background: url('../img/pexels-zeeshaan-shabbir-10267587.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#home .home-details {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .main-heading {
+    font-size:$main-font-size;
+    font-family: $roboto;
+    color: #fff;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#home .home-paragraph {
+    font-family: $roboto;
+    font-size: $paragraph-font-size;
+    line-height: 1.4;
+    color: #fff;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+// About Section
+#about {
+    position: absolute;
+    top: 101vh;
+    left: 0;
+    width: 100%;
+    bottom:130vh;
+    text-align: center;
+}
+
+#about .about-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-rows: repeat(auto-fit,minmax(200px,1fr));
+}
+
+#about .about-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0.5rem 1rem;
+}
+
+#about .about-items p {
+    font-size: 1.8rem;
+    padding-top: 2rem;
+    font-family: $roboto;
+    line-height: 1.4;
+}
